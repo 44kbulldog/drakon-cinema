@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -278,6 +278,12 @@
     display:flex; align-items:center; justify-content:center;
     border-bottom:1px solid var(--smoke-line);
   }
+  .poster.horror{
+    background:
+      repeating-linear-gradient(135deg, rgba(180,67,42,0.10) 0 2px, transparent 2px 14px),
+      radial-gradient(ellipse at 50% 110%, rgba(180,67,42,0.22), transparent 60%),
+      linear-gradient(160deg, var(--smoke) 0%, var(--void-soft) 100%);
+  }
   .poster .glyph{
     font-family:'Cinzel', serif;
     font-size:13px;
@@ -286,6 +292,21 @@
     text-align:center;
     padding:0 20px;
   }
+  .rating-badge{
+    position:absolute;
+    top:12px; right:12px;
+    display:flex; align-items:center; gap:4px;
+    background:rgba(12,10,13,0.78);
+    border:1px solid var(--gold-dim);
+    border-radius:100px;
+    padding:5px 11px 5px 9px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    font-weight:600;
+    color:var(--gold);
+    backdrop-filter:blur(2px);
+  }
+  .rating-badge svg{ width:11px; height:11px; fill:var(--gold); }
   .film-body{ padding:18px 20px 22px; }
   .film h3{
     font-family:'Cinzel', serif;
@@ -439,46 +460,34 @@
   <section class="section" id="showing">
     <div class="section-head reveal">
       <h2 class="section-title">Now showing</h2>
-      <span class="section-note">3 screenings nightly</span>
+      <span class="section-note">2 screenings nightly</span>
     </div>
     <div class="film-grid">
 
       <div class="film reveal">
-        <div class="poster"><span class="glyph">OBSESSION</span></div>
+        <div class="poster horror">
+          <span class="glyph">OBSESSION</span>
+          <span class="rating-badge"><svg viewBox="0 0 20 20"><path d="M10 1l2.6 6.2L19 8l-5 4.6L15.5 19 10 15.5 4.5 19 6 12.6 1 8l6.4-.8z"/></svg>9.1</span>
+        </div>
         <div class="film-body">
           <h3>Obsession</h3>
-          <div class="rating-row">*9.1.HORROR/DRAMA</div>
-          <p class="blurb">A reclusive cartographer is hired to map a mountain range that, the locals insist, redraws itself every winter.</p>
+          <div class="rating-row">HORROR / DRAMA</div>
           <div class="showtimes">
-            <span class="showtime">5:30</span>
-            <span class="showtime">7:45</span>
-            <span class="showtime">10:00</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="film reveal">
-        <div class="poster"><span class="glyph">THE LAST<br>SIGNAL</span></div>
-        <div class="film-body">
-          <h3>The Last Signal</h3>
-          <div class="rating-row">R · 1H 56M · THRILLER</div>
-          <p class="blurb">A radio operator at an abandoned relay station picks up a broadcast that shouldn't still be transmitting.</p>
-          <div class="showtimes">
-            <span class="showtime">6:00</span>
             <span class="showtime">8:30</span>
           </div>
         </div>
       </div>
 
       <div class="film reveal">
-        <div class="poster"><span class="glyph">QUIET HOUSE</span></div>
+        <div class="poster horror">
+          <span class="glyph">BACKROOMS</span>
+          <span class="rating-badge"><svg viewBox="0 0 20 20"><path d="M10 1l2.6 6.2L19 8l-5 4.6L15.5 19 10 15.5 4.5 19 6 12.6 1 8l6.4-.8z"/></svg>9.0</span>
+        </div>
         <div class="film-body">
-          <h3>Quiet House</h3>
-          <div class="rating-row">PG · 1H 42M · DRAMA</div>
-          <p class="blurb">Three siblings return to their childhood home for one last weekend before it's sold, and find it remembers them too.</p>
+          <h3>Backrooms</h3>
+          <div class="rating-row">HORROR</div>
           <div class="showtimes">
-            <span class="showtime">4:15</span>
-            <span class="showtime">7:00</span>
+            <span class="showtime">10:30</span>
           </div>
         </div>
       </div>
@@ -511,7 +520,7 @@
     <div class="info-grid">
       <div class="info-card reveal">
         <h3>Hours & location</h3>
-        <address>Open nightly, 4pm – midnight.<br>14 Ridgeline Hollow, off the old quarry road.</address>
+        <address>Open nightly, 4pm – midnight.<br>365 Nicollet Mall, Minneapolis, MN 55401</address>
       </div>
       <div class="info-card reveal">
         <h3>Good to know</h3>
