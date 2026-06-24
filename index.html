@@ -54,6 +54,16 @@
       radial-gradient(ellipse 900px 500px at 50% -10%, rgba(180,67,42,0.16), transparent 60%),
       linear-gradient(180deg, var(--void) 0%, var(--shadow) 55%, var(--void) 100%);
   }
+  .bg-video{
+    position:absolute;
+    top:50%; left:50%;
+    min-width:100%; min-height:100%;
+    width:auto; height:auto;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    opacity:0.32;
+    filter:saturate(0.75) contrast(1.1) brightness(0.85);
+  }
   .stars{ position:absolute; inset:0; }
   .star{
     position:absolute; width:2px; height:2px; border-radius:50%;
@@ -425,6 +435,9 @@
 <body>
 
 <div class="sky">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="videos/bg-1.mp4" type="video/mp4">
+  </video>
   <div class="stars" id="stars"></div>
   <div class="smoke-layer"></div>
   <div class="beam b1"></div>
